@@ -33,27 +33,6 @@ export default class DonationForm extends Component {
     };
   }
 
-  // shouldPaymentRender = (emptyCheckExceptions=['panno']) => {
-  //   const { errors, values } = this.state;
-  //   let ret = true;
-  //    Object.entries(errors).forEach(([k, v]) => {
-  //     if (v !== "") {
-  //       ret = false;
-  //     }
-  //   })
-
-  //   ret && Object.entries(values).forEach(([k, v]) => {
-
-  //   if (!emptyCheckExceptions.includes(k) && (!v || v == "")) {
-
-  //       ret = false;
-  //     }
-  //   })
-
-  //   ret = ret || (this.state.panRequired && this.state.values['panno'])
-  //   return ret
-  // }
-
   checkIfValidationError = () => {
     const errorsMap = this.state.errors;
     let valid = false;
@@ -130,8 +109,12 @@ export default class DonationForm extends Component {
   };
   handleSubmit = (e) => {
     e.preventDefault();
-    if(this.checkIfValidationError() || (this.checkIfAnyValueUnset()) || (this.state.panRequired && !this.state.values['panno']) ){
-       alert("Fill all the fields");
+    if (
+      this.checkIfValidationError() ||
+      this.checkIfAnyValueUnset() ||
+      (this.state.panRequired && !this.state.values["panno"])
+    ) {
+      alert("Fill all the fields");
     } else {
       document.querySelector(".paymentmethod").style.display = "block";
     }
