@@ -1,0 +1,26 @@
+  .donation-form{
+      padding: 2rem;
+      box-shadow: 1px 1px 9px 4px #3f464d;
+      background-color: white;
+  }
+  .donation-text{
+    text-shadow: 2px 2px grey;
+    margin-bottom: 2rem;
+}
+  .error {
+    color:#db2269;
+    font-size: 1rem;
+    display: relative;
+  }
+  
+ .panno{
+     display: none;
+ }
+
+ .hide{
+   display: none;
+ }
+
+ .paymentmethod{
+   display: none;
+ }

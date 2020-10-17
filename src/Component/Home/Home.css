@@ -1,0 +1,10 @@
+.bg-img{
+  background: url("https://images.pexels.com/photos/37728/pexels-photo-37728.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width:100%;
+}
+.text-main{
+  margin: 1rem;
+}
